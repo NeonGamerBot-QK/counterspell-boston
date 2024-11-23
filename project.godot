@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Counterspell-boston"
+run/main_scene="res://node_2d.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -18,3 +19,8 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+
+[rendering]
+
+rendering_device/fallback_to_vulkan=false
+renderer/rendering_method="gl_compatibility"

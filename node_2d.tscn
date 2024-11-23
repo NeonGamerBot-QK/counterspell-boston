@@ -5,25 +5,26 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n0rac"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fslva"]
-size = Vector2(1920, 54)
+size = Vector2(102.269, 1.14144)
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(960, 540)
+position = Vector2(298, 243)
+scale = Vector2(18.7712, 36.349)
 
 [node name="Block" type="RigidBody2D" parent="."]
-metadata/_edit_group_ = true
 
-[node name="BlockHitbox" type="CollisionShape2D" parent="Block"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Block"]
+scale = Vector2(2.89167, -0.871405)
 shape = SubResource("RectangleShape2D_n0rac")
 
-[node name="BlockSprite" type="Sprite2D" parent="Block"]
+[node name="Sprite2D" type="Sprite2D" parent="Block"]
+position = Vector2(-0.0266396, 0.0550236)
+scale = Vector2(0.451573, 0.136266)
 texture = ExtResource("1_gqviv")
 
 [node name="Floor" type="StaticBody2D" parent="."]
-position = Vector2(0, 513)
+position = Vector2(35.2668, 22.449)
 metadata/_edit_group_ = true
 
-[node name="FloorHitbox" type="CollisionShape2D" parent="Floor"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
 shape = SubResource("RectangleShape2D_fslva")
-
-[node name="FloorSprite" type="Sprite2D" parent="Floor"]
