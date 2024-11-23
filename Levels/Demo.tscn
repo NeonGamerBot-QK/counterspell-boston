@@ -1,12 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://nh5fnlw3k6r2"]
+[gd_scene load_steps=7 format=3 uid="uid://nh5fnlw3k6r2"]
 
 [ext_resource type="Script" path="res://bg.gd" id="1_3do08"]
-[ext_resource type="Texture2D" uid="uid://c52haqan85k53" path="res://icon.svg" id="2_qpdr8"]
 [ext_resource type="Texture2D" uid="uid://wpffmph14bp5" path="res://ASSETS/platform.svg" id="3_e1cjm"]
+[ext_resource type="Script" path="res://Levels/floor.gd" id="3_i4eee"]
 [ext_resource type="PackedScene" uid="uid://b7kjqxjnmrpdc" path="res://Player/player.tscn" id="4_a35y7"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7nlyv"]
-size = Vector2(128, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fslva"]
 size = Vector2(1100, 6.5)
@@ -18,18 +15,9 @@ size = Vector2(110, 6.5)
 position = Vector2(569, 296)
 script = ExtResource("1_3do08")
 
-[node name="Block" type="RigidBody2D" parent="."]
-position = Vector2(-443, -175)
-metadata/_edit_group_ = true
-
-[node name="BlockHitbox" type="CollisionShape2D" parent="Block"]
-shape = SubResource("RectangleShape2D_7nlyv")
-
-[node name="BlockSprite" type="Sprite2D" parent="Block"]
-texture = ExtResource("2_qpdr8")
-
-[node name="Floor" type="StaticBody2D" parent="."]
+[node name="Floor" type="Area2D" parent="."]
 position = Vector2(0, 315.75)
+script = ExtResource("3_i4eee")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
@@ -98,3 +86,5 @@ texture = ExtResource("3_e1cjm")
 [node name="Player" parent="." instance=ExtResource("4_a35y7")]
 position = Vector2(-504, 45)
 scale = Vector2(0.065, 0.065)
+
+[connection signal="body_entered" from="Floor" to="Floor" method="_on_body_entered"]

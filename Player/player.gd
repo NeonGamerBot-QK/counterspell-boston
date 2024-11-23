@@ -5,7 +5,7 @@ const GRAVITY = 30
 const JUMPFORCE = -600
 const DASH_SPEED = 800
 const DASH_DURATION = 0.2
-const WALL_JUMP_FORCE = -400
+const WALL_JUMP_FORCE = -800
 const WALL_JUMP_HORIZONTAL_SPEED = 200
 
 var dash_time_remaining = 0
