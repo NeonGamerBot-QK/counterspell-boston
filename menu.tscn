@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2soldh82d0nq"]
+
+[ext_resource type="Script" path="res://panel.gd" id="1_dugti"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1100.0
+offset_bottom = 639.0
+script = ExtResource("1_dugti")
+
+[node name="Title" type="RichTextLabel" parent="Panel"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 0
+offset_left = 450.0
+offset_right = 550.0
+offset_bottom = 40.0
+scale = Vector2(2.08927, 1.92945)
+text = "menu"
+fit_content = true
+
+[node name="Back to game" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 398.0
+offset_right = 395.0
+offset_bottom = 456.0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/Back to game"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 2.0
+offset_right = 204.0
+offset_bottom = 55.0
+theme_override_font_sizes/font_size = 25
+text = "Back to game"
+
+[node name="Quit" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 400.0
+offset_right = 904.0
+offset_bottom = 467.0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/Quit"]
+layout_mode = 0
+offset_top = 5.0
+offset_right = 188.0
+offset_bottom = 67.0
+theme_override_font_sizes/font_size = 35
+text = "Quit"
