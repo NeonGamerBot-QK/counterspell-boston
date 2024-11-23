@@ -1,0 +1,88 @@
+[gd_scene load_steps=7 format=3 uid="uid://p2k84qy7077a"]
+
+[ext_resource type="Script" path="res://bg.gd" id="1_47t5h"]
+[ext_resource type="Texture2D" uid="uid://wpffmph14bp5" path="res://ASSETS/platform.svg" id="3_mjv6u"]
+[ext_resource type="Script" path="res://Levels/floor.gd" id="3_y2rjh"]
+[ext_resource type="PackedScene" uid="uid://b7kjqxjnmrpdc" path="res://Player/player.tscn" id="4_6gusj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fslva"]
+size = Vector2(1100, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3gbcj"]
+size = Vector2(110, 6.5)
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(550, 325)
+script = ExtResource("1_47t5h")
+
+[node name="Floor" type="Area2D" parent="."]
+position = Vector2(0, 325)
+script = ExtResource("3_y2rjh")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+shape = SubResource("RectangleShape2D_fslva")
+
+[node name="Platform1" type="StaticBody2D" parent="."]
+position = Vector2(-495, 200)
+metadata/_edit_group_ = true
+
+[node name="PlatformHitbox" type="CollisionShape2D" parent="Platform1"]
+shape = SubResource("RectangleShape2D_3gbcj")
+
+[node name="PlatformSprite" type="Sprite2D" parent="Platform1"]
+texture = ExtResource("3_mjv6u")
+
+[node name="Platform2" type="StaticBody2D" parent="."]
+position = Vector2(91, 301)
+metadata/_edit_group_ = true
+
+[node name="PlatformHitbox" type="CollisionShape2D" parent="Platform2"]
+scale = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_3gbcj")
+
+[node name="PlatformSprite" type="Sprite2D" parent="Platform2"]
+scale = Vector2(2, 1)
+texture = ExtResource("3_mjv6u")
+
+[node name="Platform3" type="StaticBody2D" parent="."]
+position = Vector2(-253, 276)
+metadata/_edit_group_ = true
+
+[node name="PlatformHitbox" type="CollisionShape2D" parent="Platform3"]
+scale = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_3gbcj")
+
+[node name="PlatformSprite" type="Sprite2D" parent="Platform3"]
+scale = Vector2(2, 1)
+texture = ExtResource("3_mjv6u")
+
+[node name="Player" parent="." instance=ExtResource("4_6gusj")]
+position = Vector2(-521, 166)
+scale = Vector2(0.065, 0.065)
+
+[node name="Platform4" type="StaticBody2D" parent="."]
+position = Vector2(419, 216)
+metadata/_edit_group_ = true
+
+[node name="PlatformHitbox" type="CollisionShape2D" parent="Platform4"]
+scale = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_3gbcj")
+
+[node name="PlatformSprite" type="Sprite2D" parent="Platform4"]
+scale = Vector2(2, 1)
+texture = ExtResource("3_mjv6u")
+
+[node name="Platform5" type="StaticBody2D" parent="."]
+position = Vector2(89, 67)
+metadata/_edit_group_ = true
+
+[node name="PlatformHitbox" type="CollisionShape2D" parent="Platform5"]
+scale = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_3gbcj")
+
+[node name="PlatformSprite" type="Sprite2D" parent="Platform5"]
+scale = Vector2(2, 1)
+texture = ExtResource("3_mjv6u")
+
+[connection signal="body_entered" from="Floor" to="Floor" method="_on_body_entered"]
