@@ -8,4 +8,5 @@
 
 
 # counterspell-boston
-A wip game
+This game was created in a hackclub counterspell hackathon.
+this game is a very simple parkor map and new levels may be added.
