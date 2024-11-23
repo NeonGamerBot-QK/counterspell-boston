@@ -3,7 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://c52haqan85k53" path="res://icon.svg" id="1_gqviv"]
 [ext_resource type="PackedScene" uid="uid://b7kjqxjnmrpdc" path="res://player.tscn" id="3_cxsvd"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n0rac"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7nlyv"]
+size = Vector2(128, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fslva"]
 size = Vector2(1100, 6.5)
@@ -13,11 +14,10 @@ position = Vector2(550, 325)
 
 [node name="Block" type="RigidBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Block"]
-shape = SubResource("RectangleShape2D_n0rac")
+[node name="BlockHitbox" type="CollisionShape2D" parent="Block"]
+shape = SubResource("RectangleShape2D_7nlyv")
 
-[node name="Sprite2D" type="Sprite2D" parent="Block"]
-position = Vector2(-0.0266396, 0.0550236)
+[node name="BlockSprite" type="Sprite2D" parent="Block"]
 texture = ExtResource("1_gqviv")
 
 [node name="Floor" type="StaticBody2D" parent="."]

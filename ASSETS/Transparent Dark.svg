@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="uuid-3c1a4cbb-3ca5-4580-8843-94aef481f8af" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 540 1080">
-  <image width="2000" height="4000" transform="scale(.27)" xlink:href="dark.png"/>
+<svg id="uuid-3c1a4cbb-3ca5-4580-8843-94aef481f8af" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 540 1080">
+  <image width="2000" height="4000" xlink:href="dark.png" />
 </svg>
