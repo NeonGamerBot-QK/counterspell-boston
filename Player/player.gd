@@ -58,8 +58,6 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += GRAVITY
 	print($PlayerSprite.global_position.y)
-	if $PlayerSprite.global_position.y > 1070:
-		get_tree().quit()
 	if $PlayerSprite.global_position.x < 30:
 		velocity.x = SPEED
 	#gets it moving correctly
