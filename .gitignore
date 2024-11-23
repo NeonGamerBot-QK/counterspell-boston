@@ -2,6 +2,7 @@
 .godot/
 android/
 addons/
+venv/
 # Godot-specific ignores
 .import/
 export.cfg
