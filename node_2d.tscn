@@ -20,6 +20,7 @@ shape = SubResource("RectangleShape2D_n0rac")
 texture = ExtResource("1_gqviv")
 
 [node name="Floor" type="StaticBody2D" parent="."]
+visible = false
 position = Vector2(0, 513)
 metadata/_edit_group_ = true
 
