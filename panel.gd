@@ -6,8 +6,8 @@ var quit_button : Button
 
 func _ready():
 	# Initialize the buttons by getting them from the scene tree
-	start_button = $ButtonStart
-	quit_button = $ButtonQuit
+	start_button = $"Back to game"
+	quit_button = $"Quit"
 	
 	# Connect button signals to methods
 	start_button.connect("pressed", _on_start_button_pressed)
@@ -19,7 +19,8 @@ func _ready():
 func _on_start_button_pressed():
 	print("Start Game clicked")
 	# Here you can change to the game scene or start the gameplay
-	get_tree().change_scene("res://node_2d.tscn")  # Replace with your actual game scene path
+	#get_tree().unload_current_scene();
+	get_tree().change_scene_to_file("res://Levels/Demo.tscn")  # Replace with your actual game scene path
 
 # Called when the quit button is pressed
 func _on_quit_button_pressed():
