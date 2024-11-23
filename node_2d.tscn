@@ -1,3 +1,18 @@
-[gd_scene format=3 uid="uid://nh5fnlw3k6r2"]
+[gd_scene load_steps=3 format=3 uid="uid://nh5fnlw3k6r2"]
+
+[ext_resource type="Texture2D" uid="uid://c52haqan85k53" path="res://icon.svg" id="1_gqviv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fslva"]
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(298, 243)
+scale = Vector2(18.7712, 36.349)
+
+[node name="Block" type="RigidBody2D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Block"]
+shape = SubResource("RectangleShape2D_fslva")
+
+[node name="Sprite2D" type="Sprite2D" parent="Block"]
+texture = ExtResource("1_gqviv")
