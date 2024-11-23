@@ -15,11 +15,11 @@ size = Vector2(1100, 6.5)
 size = Vector2(161, 6.5)
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(550, 325)
+position = Vector2(550, 795)
 script = ExtResource("1_3do08")
 
 [node name="Block" type="RigidBody2D" parent="."]
-position = Vector2(-295, -153)
+position = Vector2(-443, -175)
 metadata/_edit_group_ = true
 
 [node name="BlockHitbox" type="CollisionShape2D" parent="Block"]
@@ -63,4 +63,4 @@ texture = ExtResource("3_e1cjm")
 
 [node name="Player" parent="." instance=ExtResource("4_a35y7")]
 position = Vector2(-504, 45)
-scale = Vector2(0.125, 0.125)
+scale = Vector2(0.065, 0.065)
