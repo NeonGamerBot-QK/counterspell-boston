@@ -22,7 +22,7 @@ position = Vector2(-0.0266396, 0.0550236)
 texture = ExtResource("1_gqviv")
 
 [node name="Floor" type="StaticBody2D" parent="."]
-position = Vector2(35.2668, 22.449)
+position = Vector2(0, 0)
 script = ExtResource("2_4w1c4")
 metadata/_edit_group_ = true
 
