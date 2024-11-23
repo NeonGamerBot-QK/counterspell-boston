@@ -1,16 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://b7kjqxjnmrpdc"]
+[gd_scene load_steps=3 format=3 uid="uid://b7kjqxjnmrpdc"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_jt1jr"]
-[ext_resource type="Texture2D" uid="uid://c52haqan85k53" path="res://icon.svg" id="2_k2rqk"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7da88"]
-size = Vector2(128, 128)
+[ext_resource type="Texture2D" uid="uid://f7br21y7p3qp" path="res://ASSETS/Trans-Dark.svg" id="2_wpvy1"]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_jt1jr")
 
-[node name="PlayerHitbox" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_7da88")
-
 [node name="PlayerSprite" type="Sprite2D" parent="."]
-texture = ExtResource("2_k2rqk")
+texture = ExtResource("2_wpvy1")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+build_mode = 1
+polygon = PackedVector2Array(158, -23, 159, -61, 147, -93, 127, -120, 107, -139, 91, -149, 69, -160, 46, -169, 27, -173, 25, -183, 40, -186, 61, -194, 82, -207, 99, -222, 118, -245, 130, -271, 139, -306, 140, -341, 130, -376, 106, -413, 78, -436, 46, -453, 18, -460, 1, -461, -22, -460, -49, -452, -73, -439, -98, -420, -116, -398, -130, -370, -138, -344, -140, -325, -139, -300, -134, -278, -128, -261, -119, -244, -109, -229, -95, -214, -79, -202, -57, -189, -33, -182, -20, -181, -20, -173, -35, -171, -49, -166, -67, -159, -84, -148, -106, -132, -121, -117, -134, -105, -144, -90, -151, -77, -157, -60, -162, -41, -160, -22, -156, 2, -148, 53, -108, 262, -96, 304, -81, 349, -68, 385, -48, 422, -36, 440, -22, 452, -7, 460, 6, 460, 23, 453, 41, 437, 59, 407, 73, 376, 93, 322, 117, 220, 156, -1)

@@ -31,7 +31,7 @@ metadata/_edit_group_ = true
 shape = SubResource("RectangleShape2D_fslva")
 
 [node name="Player" parent="." instance=ExtResource("3_cxsvd")]
-position = Vector2(353, 4)
+position = Vector2(342, -305)
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 script = ExtResource("4_a61pq")
