@@ -1,6 +1,5 @@
 from svgpathtools import svg2paths
 
-
 # Load SVG paths
 svg_file = "./ASSETS/Trans-Dark.svg"
 paths, attributes = svg2paths(svg_file)
