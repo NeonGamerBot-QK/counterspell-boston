@@ -15,7 +15,7 @@ size = Vector2(1100, 6.5)
 size = Vector2(110, 6.5)
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(550, 795)
+position = Vector2(569, 296)
 script = ExtResource("1_3do08")
 
 [node name="Block" type="RigidBody2D" parent="."]
