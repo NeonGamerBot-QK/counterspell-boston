@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://nh5fnlw3k6r2"]
+
+[ext_resource type="Script" path="res://bg.gd" id="1_3do08"]
+[ext_resource type="Texture2D" uid="uid://c52haqan85k53" path="res://icon.svg" id="2_qpdr8"]
+[ext_resource type="Texture2D" uid="uid://wpffmph14bp5" path="res://ASSETS/platform.svg" id="3_e1cjm"]
+[ext_resource type="PackedScene" uid="uid://b7kjqxjnmrpdc" path="res://Player/player.tscn" id="4_a35y7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7nlyv"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fslva"]
+size = Vector2(1100, 6.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3gbcj"]
+size = Vector2(110, 6.5)
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(550, 325)
+script = ExtResource("1_3do08")
+
+[node name="Block" type="RigidBody2D" parent="."]
+position = Vector2(-295, -153)
+metadata/_edit_group_ = true
+
+[node name="BlockHitbox" type="CollisionShape2D" parent="Block"]
+shape = SubResource("RectangleShape2D_7nlyv")
+
+[node name="BlockSprite" type="Sprite2D" parent="Block"]
+texture = ExtResource("2_qpdr8")
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(0, 315.75)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+shape = SubResource("RectangleShape2D_fslva")
+
+[node name="Platform1" type="StaticBody2D" parent="."]
+position = Vector2(-495, 200)
+metadata/_edit_group_ = true
+
+[node name="PlatformHitbox" type="CollisionShape2D" parent="Platform1"]
+shape = SubResource("RectangleShape2D_3gbcj")
+
+[node name="PlatformSprite" type="Sprite2D" parent="Platform1"]
+texture = ExtResource("3_e1cjm")
+
+[node name="Player" parent="." instance=ExtResource("4_a35y7")]
+position = Vector2(-504, 45)
+scale = Vector2(0.25, 0.25)
