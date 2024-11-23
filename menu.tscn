@@ -12,8 +12,8 @@ grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_right = 1100.0
-offset_bottom = 639.0
+offset_right = 2002.0
+offset_bottom = 1005.0
 script = ExtResource("1_dugti")
 
 [node name="Title" type="RichTextLabel" parent="Panel"]
@@ -43,9 +43,9 @@ text = "Back to game
 
 [node name="Quit" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 700.0
+offset_left = 744.0
 offset_top = 400.0
-offset_right = 904.0
+offset_right = 948.0
 offset_bottom = 467.0
 
 [node name="Label" type="Label" parent="Panel/Quit"]

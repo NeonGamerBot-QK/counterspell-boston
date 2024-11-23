@@ -57,6 +57,8 @@ func _physics_process(delta):
 	# This adds gravity to our character if they are not standing on something
 	if not is_on_floor():
 		velocity.y += GRAVITY
-	
-	# gets it moving correctly
+	print($PlayerSprite.global_position.y)
+	if $PlayerSprite.global_position.y > 1070:
+		get_tree().quit()
+	#gets it moving correctly
 	move_and_slide()
