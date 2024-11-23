@@ -23,7 +23,7 @@ shape = SubResource("RectangleShape2D_n0rac")
 position = Vector2(-0.0266396, 0.0550236)
 texture = ExtResource("1_gqviv")
 
-[node name="Floor" type="StaticBody2D1" parent="."]
+[node name="Floor" type="StaticBody2D" parent="."]
 position = Vector2(0, 315.75)
 metadata/_edit_group_ = true
 
