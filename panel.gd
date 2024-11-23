@@ -10,6 +10,8 @@ func _ready():
 	quit_button = $ButtonQuit
 	
 	# Connect button signals to methods
+	start_button.connect("pressed", _on_start_button_pressed)
+	quit_button.connect("pressed", _on_quit_button_pressed)
 	#start_button.connect("pressed", self, _on_start_button_pressed)	
 	#quit_button.connect("pressed", self, _on_quit_button_pressed)
 
