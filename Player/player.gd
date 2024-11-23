@@ -13,7 +13,7 @@ var is_touching_wall = false
 var has_wall_jumped = false
 
 var jumps = 0
-
+var oob_hits_until_knockback = 0;
 func _physics_process(delta):
 	# Dash mechanic
 	if Input.is_action_just_pressed("dash") and dash_time_remaining <= 0:
@@ -78,6 +78,13 @@ func _physics_process(delta):
 		velocity.y += GRAVITY
 	print($PlayerSprite.global_position.y)
 	if $PlayerSprite.global_position.x < 30:
-		velocity.x = SPEED
+		if oob_hits_until_knockback > 100:
+			velocity.x = SPEED**2
+			velocity.y = WALL_JUMP_FORCE
+			oob_hits_until_knockback = 0
+		else:
+			velocity.x = SPEED
+			
+		oob_hits_until_knockback += 1
 	#gets it moving correctly
 	move_and_slide()
