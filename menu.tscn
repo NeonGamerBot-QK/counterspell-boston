@@ -12,8 +12,8 @@ grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_right = 1100.0
-offset_bottom = 639.0
+offset_right = 1995.0
+offset_bottom = 998.0
 script = ExtResource("1_dugti")
 
 [node name="Title" type="RichTextLabel" parent="Panel"]
