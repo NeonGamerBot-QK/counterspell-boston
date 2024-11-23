@@ -7,7 +7,7 @@ svg_file = "./ASSETS/Trans-Dark.svg"
 paths, attributes = svg2paths(svg_file)
 
 # Function to sample points along a path
-def sample_points(path, num_points=1000):
+def sample_points(path, num_points=100):
     total_length = path.length()
     sampled_points = []
     for i in range(num_points):
