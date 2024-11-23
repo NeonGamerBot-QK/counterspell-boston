@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b7kjqxjnmrpdc"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_jt1jr"]
-[ext_resource type="Texture2D" uid="uid://c52haqan85k53" path="res://icon.svg" id="2_igl6i"]
+[ext_resource type="Texture2D" uid="uid://dsxa6cn4yw1m" path="res://ASSETS/Transparent Light.svg" id="2_snrfl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1k50p"]
 
@@ -12,4 +12,6 @@ script = ExtResource("1_jt1jr")
 shape = SubResource("RectangleShape2D_1k50p")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_igl6i")
+position = Vector2(0, 1)
+scale = Vector2(0.42963, 0.42963)
+texture = ExtResource("2_snrfl")
