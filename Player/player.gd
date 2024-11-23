@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-const SPEED = 100
+const SPEED = 200
 const GRAVITY = 30
-const JUMPFORCE = -600
+const JUMPFORCE = -800
 func _ready() -> void:
 	print($PlayerSprite.global_position)
 
