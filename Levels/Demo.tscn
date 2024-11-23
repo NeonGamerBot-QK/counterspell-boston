@@ -19,11 +19,7 @@ position = Vector2(550, 795)
 script = ExtResource("1_3do08")
 
 [node name="Block" type="RigidBody2D" parent="."]
-<<<<<<< HEAD
 position = Vector2(-443, -175)
-=======
-position = Vector2(-472, -175)
->>>>>>> eb9272ddaf2b347ceebf1cafe6a16c89d7f76995
 metadata/_edit_group_ = true
 
 [node name="BlockHitbox" type="CollisionShape2D" parent="Block"]
