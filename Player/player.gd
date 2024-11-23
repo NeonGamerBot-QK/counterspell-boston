@@ -46,6 +46,7 @@ func _physics_process(delta):
 		if Input.is_action_pressed("right"):
 			velocity.x = SPEED
 			$PlayerSprite.flip_h = false
+			oob_hits_until_knockback = 0
 		elif Input.is_action_pressed("left"):
 			if $PlayerSprite.global_position.x > 30:
 				velocity.x = -SPEED
@@ -78,7 +79,7 @@ func _physics_process(delta):
 		velocity.y += GRAVITY
 	print($PlayerSprite.global_position.y)
 	if $PlayerSprite.global_position.x < 30:
-		if oob_hits_until_knockback > 100:
+		if oob_hits_until_knockback > 1000:
 			velocity.x = SPEED**2
 			velocity.y = WALL_JUMP_FORCE
 			oob_hits_until_knockback = 0
