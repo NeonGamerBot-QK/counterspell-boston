@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b7kjqxjnmrpdc"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_jt1jr"]
-[ext_resource type="Texture2D" uid="uid://dkqf0tllsvnq1" path="res://ASSETS/Trans-Dark.svg" id="2_wpvy1"]
+[ext_resource type="Texture2D" uid="uid://f7br21y7p3qp" path="res://ASSETS/Trans-Dark.svg" id="2_wpvy1"]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_jt1jr")

@@ -8,8 +8,11 @@ func _physics_process(delta):
 	#Adding left and right directional movement based on the variable SPEED
 	if Input.is_action_pressed("right"):
 		velocity.x = SPEED
+		$PlayerSprite.flip_h = false
+	
 	if Input.is_action_pressed("left"):
 		velocity.x = -SPEED
+		$PlayerSprite.flip_h = true	
 		
 	#Adding in a jump just once if the character is on the floor
 	if Input.is_action_just_pressed("jump") and is_on_floor():
