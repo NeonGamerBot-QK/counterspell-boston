@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://b2soldh82d0nq"]
+[gd_scene load_steps=2 format=3 uid="uid://chns2hehsp4xj"]
 
 [ext_resource type="Script" path="res://panel.gd" id="1_dugti"]
 
@@ -49,6 +49,7 @@ offset_right = 904.0
 offset_bottom = 467.0
 
 [node name="Label" type="Label" parent="Panel/Quit"]
+layout_mode = 0
 offset_right = 198.0
 offset_bottom = 53.0
 scale = Vector2(1.5, 1.5)
