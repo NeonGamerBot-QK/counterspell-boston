@@ -25,7 +25,6 @@ texture = ExtResource("1_gqviv")
 
 [node name="Floor" type="StaticBody2D" parent="."]
 visible = false
-position = Vector2(0, 513)
 position = Vector2(35.2668, 22.449)
 script = ExtResource("2_4w1c4")
 metadata/_edit_group_ = true
