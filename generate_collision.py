@@ -1,4 +1,3 @@
-import numpy as np
 from svgpathtools import svg2paths
 
 
