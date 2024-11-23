@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://nh5fnlw3k6r2"]
+[gd_scene load_steps=8 format=3 uid="uid://nh5fnlw3k6r2"]
 
 [ext_resource type="Script" path="res://bg.gd" id="1_3do08"]
 [ext_resource type="Texture2D" uid="uid://wpffmph14bp5" path="res://ASSETS/platform.svg" id="3_e1cjm"]
@@ -10,6 +10,9 @@ size = Vector2(1100, 6.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3gbcj"]
 size = Vector2(110, 6.5)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qyyyj"]
+polygon = PackedVector2Array(-567, -298, -400, -298, -400, -260, -566, -260)
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(569, 296)
@@ -24,7 +27,7 @@ metadata/_edit_group_ = true
 shape = SubResource("RectangleShape2D_fslva")
 
 [node name="Platform1" type="StaticBody2D" parent="."]
-position = Vector2(-495, 200)
+position = Vector2(-515, 200)
 metadata/_edit_group_ = true
 
 [node name="PlatformHitbox" type="CollisionShape2D" parent="Platform1"]
@@ -34,7 +37,7 @@ shape = SubResource("RectangleShape2D_3gbcj")
 texture = ExtResource("3_e1cjm")
 
 [node name="Platform2" type="StaticBody2D" parent="."]
-position = Vector2(-174, 201)
+position = Vector2(-261, 201)
 metadata/_edit_group_ = true
 
 [node name="PlatformHitbox" type="CollisionShape2D" parent="Platform2"]
@@ -46,7 +49,8 @@ scale = Vector2(2, 1)
 texture = ExtResource("3_e1cjm")
 
 [node name="Platform4" type="StaticBody2D" parent="."]
-position = Vector2(199, -104)
+position = Vector2(23, 0)
+scale = Vector2(0.5, 1)
 metadata/_edit_group_ = true
 
 [node name="PlatformHitbox" type="CollisionShape2D" parent="Platform4"]
@@ -57,8 +61,86 @@ shape = SubResource("RectangleShape2D_3gbcj")
 scale = Vector2(2, 1)
 texture = ExtResource("3_e1cjm")
 
+[node name="Platform5" type="StaticBody2D" parent="."]
+position = Vector2(143, 65)
+scale = Vector2(0.5, 1)
+metadata/_edit_group_ = true
+
+[node name="PlatformHitbox" type="CollisionShape2D" parent="Platform5"]
+scale = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_3gbcj")
+
+[node name="PlatformSprite" type="Sprite2D" parent="Platform5"]
+scale = Vector2(2, 1)
+texture = ExtResource("3_e1cjm")
+
+[node name="Platform6" type="StaticBody2D" parent="."]
+position = Vector2(82, 138)
+scale = Vector2(0.5, 1)
+metadata/_edit_group_ = true
+
+[node name="PlatformHitbox" type="CollisionShape2D" parent="Platform6"]
+scale = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_3gbcj")
+
+[node name="PlatformSprite" type="Sprite2D" parent="Platform6"]
+scale = Vector2(2, 1)
+texture = ExtResource("3_e1cjm")
+
+[node name="Platform7" type="StaticBody2D" parent="."]
+position = Vector2(160, 212)
+scale = Vector2(0.5, 1)
+metadata/_edit_group_ = true
+
+[node name="PlatformHitbox" type="CollisionShape2D" parent="Platform7"]
+scale = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_3gbcj")
+
+[node name="PlatformSprite" type="Sprite2D" parent="Platform7"]
+scale = Vector2(2, 1)
+texture = ExtResource("3_e1cjm")
+
+[node name="Platform8" type="StaticBody2D" parent="."]
+position = Vector2(472, -65)
+scale = Vector2(0.5, 1)
+metadata/_edit_group_ = true
+
+[node name="PlatformHitbox" type="CollisionShape2D" parent="Platform8"]
+scale = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_3gbcj")
+
+[node name="PlatformSprite" type="Sprite2D" parent="Platform8"]
+scale = Vector2(2, 1)
+texture = ExtResource("3_e1cjm")
+
+[node name="Platform9" type="StaticBody2D" parent="."]
+position = Vector2(222, -216)
+scale = Vector2(0.5, 1)
+metadata/_edit_group_ = true
+
+[node name="PlatformHitbox" type="CollisionShape2D" parent="Platform9"]
+scale = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_3gbcj")
+
+[node name="PlatformSprite" type="Sprite2D" parent="Platform9"]
+scale = Vector2(2, 1)
+texture = ExtResource("3_e1cjm")
+
+[node name="Platform10" type="StaticBody2D" parent="."]
+position = Vector2(-254, -194)
+scale = Vector2(0.5, 1)
+metadata/_edit_group_ = true
+
+[node name="PlatformHitbox" type="CollisionShape2D" parent="Platform10"]
+scale = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_3gbcj")
+
+[node name="PlatformSprite" type="Sprite2D" parent="Platform10"]
+scale = Vector2(2, 1)
+texture = ExtResource("3_e1cjm")
+
 [node name="Wall" type="StaticBody2D" parent="."]
-position = Vector2(26, 56)
+position = Vector2(-74, 91)
 metadata/_edit_group_ = true
 
 [node name="PlatformHitbox" type="CollisionShape2D" parent="Wall"]
@@ -70,8 +152,34 @@ position = Vector2(0, -3.33786e-05)
 scale = Vector2(0.5, 46.2857)
 texture = ExtResource("3_e1cjm")
 
+[node name="Wall3" type="StaticBody2D" parent="."]
+position = Vector2(272, -57)
+metadata/_edit_group_ = true
+
+[node name="PlatformHitbox" type="CollisionShape2D" parent="Wall3"]
+scale = Vector2(0.5, 50)
+shape = SubResource("RectangleShape2D_3gbcj")
+
+[node name="PlatformSprite" type="Sprite2D" parent="Wall3"]
+position = Vector2(0, -3.33786e-05)
+scale = Vector2(0.5, 46.2857)
+texture = ExtResource("3_e1cjm")
+
+[node name="Wall4" type="StaticBody2D" parent="."]
+position = Vector2(388, 94)
+metadata/_edit_group_ = true
+
+[node name="PlatformHitbox" type="CollisionShape2D" parent="Wall4"]
+scale = Vector2(0.5, 50)
+shape = SubResource("RectangleShape2D_3gbcj")
+
+[node name="PlatformSprite" type="Sprite2D" parent="Wall4"]
+position = Vector2(0, -3.33786e-05)
+scale = Vector2(0.5, 46.2857)
+texture = ExtResource("3_e1cjm")
+
 [node name="Wall2" type="StaticBody2D" parent="."]
-position = Vector2(-100, -87)
+position = Vector2(-177, -35)
 metadata/_edit_group_ = true
 
 [node name="PlatformHitbox" type="CollisionShape2D" parent="Wall2"]
@@ -85,6 +193,27 @@ texture = ExtResource("3_e1cjm")
 
 [node name="Player" parent="." instance=ExtResource("4_a35y7")]
 position = Vector2(-504, 45)
-scale = Vector2(0.065, 0.065)
+scale = Vector2(0.033, 0.033)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+position = Vector2(0, -28)
+occluder = SubResource("OccluderPolygon2D_qyyyj")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+position = Vector2(255, -28)
+occluder = SubResource("OccluderPolygon2D_qyyyj")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="."]
+position = Vector2(556, -28)
+occluder = SubResource("OccluderPolygon2D_qyyyj")
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="."]
+position = Vector2(815, -28)
+occluder = SubResource("OccluderPolygon2D_qyyyj")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+position = Vector2(8, -28)
+rotation = 0.359538
+shadow_enabled = true
 
 [connection signal="body_entered" from="Floor" to="Floor" method="_on_body_entered"]
