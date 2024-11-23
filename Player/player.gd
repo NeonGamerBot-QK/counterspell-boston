@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 100
+const SPEED = 200
 const GRAVITY = 30
 const JUMPFORCE = -600
 const DASH_SPEED = 800
@@ -11,11 +11,27 @@ const WALL_JUMP_HORIZONTAL_SPEED = 200
 var dash_time_remaining = 0
 var is_touching_wall = false
 
+var jumps = 0
+
 func _physics_process(delta):
 	# Dash mechanic
 	if Input.is_action_just_pressed("dash") and dash_time_remaining <= 0:
 		dash_time_remaining = DASH_DURATION
 	
+	if Input.is_action_pressed("left"):
+		if $PlayerSprite.global_position.x > 30:
+			velocity.x = -SPEED
+		$PlayerSprite.flip_h = true
+		
+	#Adding in a jump just once if the character is on the floor
+	if Input.is_action_just_pressed("jump"):
+		if is_on_floor():
+			jumps = 0
+		
+		jumps += 1
+		if jumps <= 2:
+			print("can double jump", jumps)
+			velocity.y += JUMPFORCE/(jumps)
 	if dash_time_remaining > 0:
 		dash_time_remaining -= delta
 		if Input.is_action_pressed("right"):
