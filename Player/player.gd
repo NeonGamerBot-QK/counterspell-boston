@@ -1,17 +1,20 @@
 extends CharacterBody2D
 
-const SPEED = 100
+const SPEED = 200
 const GRAVITY = 30
-const JUMPFORCE = -600
+const JUMPFORCE = -800
+func _ready() -> void:
+	print($PlayerSprite.global_position)
 
 func _physics_process(delta):
 	#Adding left and right directional movement based on the variable SPEED
 	if Input.is_action_pressed("right"):
 		velocity.x = SPEED
 		$PlayerSprite.flip_h = false
-	
+		
 	if Input.is_action_pressed("left"):
-		velocity.x = -SPEED
+		if $PlayerSprite.global_position.x > 20:
+			velocity.x = -SPEED
 		$PlayerSprite.flip_h = true	
 		
 	#Adding in a jump just once if the character is on the floor
