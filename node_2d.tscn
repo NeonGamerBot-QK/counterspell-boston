@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://nh5fnlw3k6r2"]
+[gd_scene load_steps=5 format=3 uid="uid://nh5fnlw3k6r2"]
 
 [ext_resource type="Texture2D" uid="uid://c52haqan85k53" path="res://icon.svg" id="1_gqviv"]
+[ext_resource type="Script" path="res://floor.gd" id="2_4w1c4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n0rac"]
 
@@ -24,6 +25,7 @@ texture = ExtResource("1_gqviv")
 
 [node name="Floor" type="StaticBody2D" parent="."]
 position = Vector2(35.2668, 22.449)
+script = ExtResource("2_4w1c4")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
