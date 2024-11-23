@@ -1,16 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://nh5fnlw3k6r2"]
+[gd_scene load_steps=5 format=3 uid="uid://nh5fnlw3k6r2"]
 
 [ext_resource type="Texture2D" uid="uid://c52haqan85k53" path="res://icon.svg" id="1_gqviv"]
-[ext_resource type="Script" path="res://floor.gd" id="2_4w1c4"]
 [ext_resource type="PackedScene" uid="uid://b7kjqxjnmrpdc" path="res://player.tscn" id="3_cxsvd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n0rac"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fslva"]
-size = Vector2(102.269, 1.14144)
+size = Vector2(1100, 6.5)
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(298, 243)
+position = Vector2(550, 325)
 
 [node name="Block" type="RigidBody2D" parent="."]
 
@@ -22,11 +21,11 @@ position = Vector2(-0.0266396, 0.0550236)
 texture = ExtResource("1_gqviv")
 
 [node name="Floor" type="StaticBody2D" parent="."]
-position = Vector2(0, 513)
-script = ExtResource("2_4w1c4")
+position = Vector2(0, 321.75)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
 shape = SubResource("RectangleShape2D_fslva")
 
 [node name="Player" parent="." instance=ExtResource("3_cxsvd")]
+position = Vector2(353, 4)
