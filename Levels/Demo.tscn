@@ -57,16 +57,42 @@ shape = SubResource("RectangleShape2D_3gbcj")
 scale = Vector2(2, 1)
 texture = ExtResource("3_e1cjm")
 
-[node name="Platform3" type="StaticBody2D" parent="."]
+[node name="Platform4" type="StaticBody2D" parent="."]
+position = Vector2(199, -104)
+metadata/_edit_group_ = true
+
+[node name="PlatformHitbox" type="CollisionShape2D" parent="Platform4"]
+scale = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_3gbcj")
+
+[node name="PlatformSprite" type="Sprite2D" parent="Platform4"]
+scale = Vector2(2, 1)
+texture = ExtResource("3_e1cjm")
+
+[node name="Wall" type="StaticBody2D" parent="."]
 position = Vector2(26, 56)
 metadata/_edit_group_ = true
 
-[node name="PlatformHitbox" type="CollisionShape2D" parent="Platform3"]
+[node name="PlatformHitbox" type="CollisionShape2D" parent="Wall"]
 scale = Vector2(0.5, 50)
 shape = SubResource("RectangleShape2D_3gbcj")
 
-[node name="PlatformSprite" type="Sprite2D" parent="Platform3"]
+[node name="PlatformSprite" type="Sprite2D" parent="Wall"]
+position = Vector2(0, -3.33786e-05)
+scale = Vector2(0.5, 46.2857)
+texture = ExtResource("3_e1cjm")
+
+[node name="Wall2" type="StaticBody2D" parent="."]
+position = Vector2(-100, -87)
+metadata/_edit_group_ = true
+
+[node name="PlatformHitbox" type="CollisionShape2D" parent="Wall2"]
 scale = Vector2(0.5, 50)
+shape = SubResource("RectangleShape2D_3gbcj")
+
+[node name="PlatformSprite" type="Sprite2D" parent="Wall2"]
+position = Vector2(0, -3.33786e-05)
+scale = Vector2(0.5, 46.2857)
 texture = ExtResource("3_e1cjm")
 
 [node name="Player" parent="." instance=ExtResource("4_a35y7")]
