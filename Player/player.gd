@@ -60,5 +60,7 @@ func _physics_process(delta):
 	print($PlayerSprite.global_position.y)
 	if $PlayerSprite.global_position.y > 1070:
 		get_tree().quit()
+	if $PlayerSprite.global_position.x < 30:
+		velocity.x = SPEED
 	#gets it moving correctly
 	move_and_slide()
