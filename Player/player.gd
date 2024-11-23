@@ -13,7 +13,8 @@ func _physics_process(delta):
 		$PlayerSprite.flip_h = false
 		
 	if Input.is_action_pressed("left"):
-		if $PlayerSprite.global_position.x > 20:
+		print($PlayerSprite.global_position.x)
+		if $PlayerSprite.global_position.x > 30:
 			velocity.x = -SPEED
 		$PlayerSprite.flip_h = true	
 		
