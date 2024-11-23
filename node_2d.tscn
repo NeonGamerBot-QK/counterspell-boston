@@ -22,9 +22,9 @@ position = Vector2(-0.0266396, 0.0550236)
 scale = Vector2(0.451573, 0.136266)
 texture = ExtResource("1_gqviv")
 
-[node name="RigidBody2D" type="StaticBody2D" parent="."]
+[node name="Floor" type="StaticBody2D" parent="."]
 position = Vector2(35.2668, 22.449)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
 shape = SubResource("RectangleShape2D_fslva")
