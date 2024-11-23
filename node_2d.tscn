@@ -21,7 +21,7 @@ position = Vector2(-0.0266396, 0.0550236)
 texture = ExtResource("1_gqviv")
 
 [node name="Floor" type="StaticBody2D" parent="."]
-position = Vector2(0, 321.75)
+position = Vector2(0, 315.75)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
