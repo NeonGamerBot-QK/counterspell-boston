@@ -11,8 +11,10 @@ const MAX_WALL_JUMPS = 2
 
 var dash_time_remaining = 0
 var is_touching_wall = false
-var wall_jump_count = 0
+var has_wall_jumped = false
 
+var jumps = 0
+var oob_hits_until_knockback = 0;
 func _physics_process(delta):
 	# Dash mechanic
 	if Input.is_action_just_pressed("dash") and dash_time_remaining <= 0:
@@ -31,6 +33,7 @@ func _physics_process(delta):
 		if Input.is_action_pressed("right"):
 			velocity.x = SPEED
 			$PlayerSprite.flip_h = false
+			oob_hits_until_knockback = 0
 		elif Input.is_action_pressed("left"):
 			if $PlayerSprite.global_position.x > 30:
 				velocity.x = -SPEED
@@ -61,6 +64,15 @@ func _physics_process(delta):
 	# This adds gravity to our character if they are not standing on something
 	if not is_on_floor():
 		velocity.y += GRAVITY
-	
-	# gets it moving correctly
+	print($PlayerSprite.global_position.y)
+	if $PlayerSprite.global_position.x < 30:
+		if oob_hits_until_knockback > 1000:
+			velocity.x = SPEED**2
+			velocity.y = WALL_JUMP_FORCE
+			oob_hits_until_knockback = 0
+		else:
+			velocity.x = SPEED
+			
+		oob_hits_until_knockback += 1
+	#gets it moving correctly
 	move_and_slide()
