@@ -9,7 +9,7 @@
 size = Vector2(1100, 6.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3gbcj"]
-size = Vector2(110, 6.5)
+size = Vector2(118, 5.97)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qyyyj"]
 polygon = PackedVector2Array(-567, -298, -400, -298, -400, -260, -566, -260)
@@ -41,6 +41,7 @@ position = Vector2(-261, 201)
 metadata/_edit_group_ = true
 
 [node name="PlatformHitbox" type="CollisionShape2D" parent="Platform2"]
+position = Vector2(2, 0)
 scale = Vector2(2, 1)
 shape = SubResource("RectangleShape2D_3gbcj")
 
@@ -93,6 +94,7 @@ scale = Vector2(0.5, 1)
 metadata/_edit_group_ = true
 
 [node name="PlatformHitbox" type="CollisionShape2D" parent="Platform7"]
+position = Vector2(6, 0)
 scale = Vector2(2, 1)
 shape = SubResource("RectangleShape2D_3gbcj")
 
@@ -157,12 +159,13 @@ position = Vector2(272, -57)
 metadata/_edit_group_ = true
 
 [node name="PlatformHitbox" type="CollisionShape2D" parent="Wall3"]
+position = Vector2(0, -13.25)
 scale = Vector2(0.5, 50)
 shape = SubResource("RectangleShape2D_3gbcj")
 
 [node name="PlatformSprite" type="Sprite2D" parent="Wall3"]
-position = Vector2(0, -3.33786e-05)
-scale = Vector2(0.5, 46.2857)
+position = Vector2(0, -13)
+scale = Vector2(0.5, 42.5714)
 texture = ExtResource("3_e1cjm")
 
 [node name="Wall4" type="StaticBody2D" parent="."]
